@@ -1,0 +1,39 @@
+//این جن کینز فایل برای موقعی است که تمپلیت ما پایپ لاین است 
+//در تمپلیت اصلی که برای میون ساخته شده بود به راحتی گیت را کلون کردیم
+pipeline {
+    agent any
+
+    tools {
+        maven 'Maven 3.9.6' // Name der Maven-Installation in der Global Tool Configuration
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Abrufen des Codes aus dem Git-Repository mit Anmeldeinformationen
+                git credentialsId: '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', url: 'https://github.com/nima3608/hello-world.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Kompilieren des Projekts mit Maven
+                bat 'mvn clean compile'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Ausführen der Tests mit Maven
+                bat 'mvn test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                // Deployment-Schritte (Beispiel)
+                echo 'Deploying application...'
+            }
+        }
+    }
+}
