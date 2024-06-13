@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+     triggers {
+        githubPush()
+        cron('H\2 * * *')
+    }
+
     tools {
         maven 'Maven 3.9.6' // Name der Maven-Installation in der Global Tool Configuration
     }
