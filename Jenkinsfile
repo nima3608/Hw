@@ -14,7 +14,8 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Code aus dem Versionskontrollsystem abrufen
-                git 'https://github.com/nima3608/hello-world.git'
+                //git 'https://github.com/nima3608/hello-world.git'
+                 git branch: 'main', url: 'https://github.com/nima3608/jenkinss.git' 
             }
         }
 
