@@ -5,6 +5,7 @@ pipeline {
         //githubPush()
         cron('H/2 * * * *')
     }
+     
 
     tools {
         maven 'Maven 3.9.6' // Name der Maven-Installation in der Global Tool Configuration
@@ -15,7 +16,7 @@ pipeline {
             steps {
                 // Code aus dem Versionskontrollsystem abrufen
                 //git 'https://github.com/nima3608/hello-world.git'
-                 git branch: 'main', url: 'https://github.com/nima3608/jenkinss.git' 
+                 git branch: 'main', url: 'https://github.com/nima3608/Hw.git' 
             }
         }
 
