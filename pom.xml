@@ -17,7 +17,7 @@
         </repository>
         <snapshotRepository>
             <id>my-snapshot-repo</id>
-            <url>http://your.repository.url/snapshot-repository</url>
+            <url>https://github.com/nima3608/snapshotrepository.git</url>
         </snapshotRepository>
     </distributionManagement>
 
