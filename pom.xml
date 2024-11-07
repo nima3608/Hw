@@ -13,7 +13,7 @@
     <distributionManagement>
         <repository>
             <id>my-repo</id>
-            <url>http://your.repository.url/repository</url>
+            <url>https://github.com/nima3608/snapshotrepository.git</url>
         </repository>
         <snapshotRepository>
             <id>my-snapshot-repo</id>
